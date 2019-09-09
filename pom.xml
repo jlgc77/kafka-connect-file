@@ -3,7 +3,7 @@
 	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>io.wizzie</groupId>
-	<artifactId>kafka-connect-skeleton</artifactId>
+	<artifactId>kafka-connect-file</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
 	<properties>
 		<kafka.version>2.3.0</kafka.version>
@@ -31,6 +31,14 @@
 				<configuration>
 					<source>8</source>
 					<target>8</target>
+				</configuration>
+			</plugin>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-jar-plugin</artifactId>
+				<version>3.1.2</version>
+				<configuration>
+					<finalName>${artifactId}</finalName>
 				</configuration>
 			</plugin>
 		</plugins>
