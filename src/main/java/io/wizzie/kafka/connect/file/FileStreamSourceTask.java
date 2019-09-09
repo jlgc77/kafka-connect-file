@@ -1,4 +1,4 @@
-package io.wizzie.kafka.connect.skeleton;
+package io.wizzie.kafka.connect.file;
 
 import java.io.BufferedReader;
 import java.io.IOException;

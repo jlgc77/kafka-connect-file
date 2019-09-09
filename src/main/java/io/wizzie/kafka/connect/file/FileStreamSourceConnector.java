@@ -1,4 +1,4 @@
-package io.wizzie.kafka.connect.skeleton;
+package io.wizzie.kafka.connect.file;
 
 import org.apache.kafka.common.config.AbstractConfig;
 import org.apache.kafka.common.config.ConfigDef;
