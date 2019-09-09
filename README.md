@@ -1,7 +1,3 @@
-# Kafka Connect. Kafka 2.3 and Maven. 
-# Read and writer from local file
-
-Connector based on the official Kafka documentation.
 
 But created with maven instead of gradle.
 
@@ -14,3 +10,10 @@ From the root folder where we have unzipped kafka, we start Zookeeper and Kafka:
 
  - bin/zookeeper-server-start.sh config/zookeeper.properties
  - bin/kafka-server-start.sh config/server.properties
+ - 
+We leave the project https://github.com/jlgc77/kafka-connect-file, and we package it.
+ - mvn clean package
+ 
+We add the project to CLASSPATH:
+
+ - export CLASSPATH=<path-proyect>/target/kafka-connect-file.jar
