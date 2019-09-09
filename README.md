@@ -1,3 +1,7 @@
+# Kafka Connect. Kafka 2.3 and Maven. 
+# Read and writer from local file
+
+Connector based on the official Kafka documentation.
 
 But created with maven instead of gradle.
 
@@ -17,3 +21,15 @@ We leave the project https://github.com/jlgc77/kafka-connect-file, and we packag
 We add the project to CLASSPATH:
 
  - export CLASSPATH=<path-proyect>/target/kafka-connect-file.jar
+
+From the root path of the project, start the connector:
+
+ - <path-kafka>/bin/connect-standalone.sh config/connect-standalone.properties config/connect-file-source.properties
+ 
+In the root folder of the project we add data to the file, it is not necessary to create the file, when executing the command below, it will be created automatically.
+
+ - echo `date` >> test.txt
+
+We create a consumer of the topic, it is not necessary to create the topic before, it will be created automatically when necessary
+
+ -  <path-kafka>/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic connect-test --from-beginning
