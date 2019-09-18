@@ -24,7 +24,7 @@ We add the project to CLASSPATH:
 
 From the root path of the project, start the connector:
 
- - <path-kafka>/bin/connect-standalone.sh config/connect-standalone.properties config/connect-file-source.properties
+ - `<path-kafka>`/bin/connect-standalone.sh config/connect-standalone.properties config/connect-file-source.properties
  
 In the root folder of the project we add data to the file, it is not necessary to create the file, when executing the command below, it will be created automatically.
 
@@ -32,4 +32,4 @@ In the root folder of the project we add data to the file, it is not necessary t
 
 We create a consumer of the topic, it is not necessary to create the topic before, it will be created automatically when necessary
 
- -  <path-kafka>/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic connect-test --from-beginning
+ -  `<path-kafka>`/bin/kafka-console-consumer.sh --bootstrap-server localhost:9092 --topic connect-test --from-beginning
